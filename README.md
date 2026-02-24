@@ -32,12 +32,6 @@ JWT_SECRET=your_jwt_secret
 SALT_ROUNDS=10
 ```
 
-### 3. Seed the database (creates roles + default MANAGER account)
-
-```bash
-node seed.js
-```
-
 Default MANAGER credentials:
 
 ```
