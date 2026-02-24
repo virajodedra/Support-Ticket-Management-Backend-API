@@ -1,0 +1,262 @@
+{
+  "info": {
+    "_postman_id": "44edda37-e270-4fc5-8919-c5ca0acca89c",
+    "name": "Support Ticket Management API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "45709614",
+    "_collection_link": "https://go.postman.co/collection/45709614-44edda37-e270-4fc5-8919-c5ca0acca89c?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Login User",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{ \r\n\"email\":\"manager@company.com\",\r\n\"password\":\"Manager@123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/auth/login",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["auth", "login"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "Create User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OWQyYWQ0MjIxNmIwNDNhOTVkMmI1YSIsImVtYWlsIjoibWFuYWdlckBjb21wYW55LmNvbSIsInJvbGUiOiJNQU5BR0VSIiwiaWF0IjoxNzcxOTA5NTI1LCJleHAiOjE3NzE5MjM5MjV9.DcJOhFNXhgMQpSxSGgNAMNpfJOfbbCskNTaIk-_ZI_g",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"name\" : \"vir\",\r\n    \"email\":\"vir@gmail.com\",\r\n    \"password\": \"vir\",\r\n    \"role\":\"manager\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/users",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["users"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Get Users",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OWQyYWQ0MjIxNmIwNDNhOTVkMmI1YSIsImVtYWlsIjoibWFuYWdlckBjb21wYW55LmNvbSIsInJvbGUiOiJNQU5BR0VSIiwiaWF0IjoxNzcxOTA5NTI1LCJleHAiOjE3NzE5MjM5MjV9.DcJOhFNXhgMQpSxSGgNAMNpfJOfbbCskNTaIk-_ZI_g",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/users",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["users"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Tickets",
+      "item": [
+        {
+          "name": "Create Ticket",
+          "request": {
+            "method": "POST",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Get Tickets",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OWQzNjI3MDhkNWJlOWQ1NzVmYTEzZiIsImVtYWlsIjoidmlyQGdtYWlsLmNvbSIsInJvbGUiOiJNQU5BR0VSIiwiaWF0IjoxNzcxOTEyMjc1LCJleHAiOjE3NzE5MjY2NzV9.ddNOW87t-kK4sIjMBLMVZ-lDTPFnwh4SKTNzeV3lHl8",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "localhost:3000/tickets",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["tickets"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Assign The Ticket",
+          "request": {
+            "method": "PATCH",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Update Ticket Status",
+          "request": {
+            "method": "PATCH",
+            "header": []
+          },
+          "response": []
+        },
+        {
+          "name": "Delete The Ticket",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OWQzNjI3MDhkNWJlOWQ1NzVmYTEzZiIsImVtYWlsIjoidmlyQGdtYWlsLmNvbSIsInJvbGUiOiJNQU5BR0VSIiwiaWF0IjoxNzcxOTEyMjc1LCJleHAiOjE3NzE5MjY2NzV9.ddNOW87t-kK4sIjMBLMVZ-lDTPFnwh4SKTNzeV3lHl8",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "localhost:3000/tickets/699d3e0883eef2f2c7201f7f",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["tickets", "699d3e0883eef2f2c7201f7f"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Comments",
+      "item": [
+        {
+          "name": "Add a Comment to the Ticket",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OWQzNjI3MDhkNWJlOWQ1NzVmYTEzZiIsImVtYWlsIjoidmlyQGdtYWlsLmNvbSIsInJvbGUiOiJNQU5BR0VSIiwiaWF0IjoxNzcxOTEyMjc1LCJleHAiOjE3NzE5MjY2NzV9.ddNOW87t-kK4sIjMBLMVZ-lDTPFnwh4SKTNzeV3lHl8",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"comment\" : \" we are trying to resolve your issue. \"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "localhost:3000/tickets/699d3c9321fd0e189a952ae1/comments",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["tickets", "699d3c9321fd0e189a952ae1", "comments"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "List Comments for a Ticket",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OWQzNjI3MDhkNWJlOWQ1NzVmYTEzZiIsImVtYWlsIjoidmlyQGdtYWlsLmNvbSIsInJvbGUiOiJNQU5BR0VSIiwiaWF0IjoxNzcxOTEyMjc1LCJleHAiOjE3NzE5MjY2NzV9.ddNOW87t-kK4sIjMBLMVZ-lDTPFnwh4SKTNzeV3lHl8",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "localhost:3000/tickets/699d3c9321fd0e189a952ae1/comments",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["tickets", "699d3c9321fd0e189a952ae1", "comments"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update the Comment",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "localhost:3000/tickets/699d3c9321fd0e189a952ae1/comments",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["tickets", "699d3c9321fd0e189a952ae1", "comments"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Delete the  Coment",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY5OWQzNjI3MDhkNWJlOWQ1NzVmYTEzZiIsImVtYWlsIjoidmlyQGdtYWlsLmNvbSIsInJvbGUiOiJNQU5BR0VSIiwiaWF0IjoxNzcxOTEyMjc1LCJleHAiOjE3NzE5MjY2NzV9.ddNOW87t-kK4sIjMBLMVZ-lDTPFnwh4SKTNzeV3lHl8",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "localhost:3000/comments/699d5358d36323c6b07f6305",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["comments", "699d5358d36323c6b07f6305"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
